@@ -1,0 +1,28 @@
+
+.main{
+    height: 90vh;
+    width: 25vw;
+    background-color: black;
+    border-radius: 3%;
+}
+
+.first{
+    width:100vw;
+    height:100vh;
+}
+.header{
+    height: 10vh;
+    width: 100vw;
+    background-color: rgb(46, 43, 43);
+}
+
+.sized{
+    /* height: 40vh; */
+    /* height: 250px; */
+    width: 16vw;
+}
+.img1{
+    height: 30vh;
+    width: 15vw;
+}
+

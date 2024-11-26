@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../index.css">
+    <title>Home</title>
+</head>
+
+<body onload="tag()">
+    <div class="container-fluid">
+        <div class="row px-2 py-2 d-flex align-items-center justify-content-between header">
+            <span style="color:white;">Home</span>
+
+            <div>
+                <a href="/home" class="btn btn-dark">Back</a>
+                <a href="/changePassword" class="btn btn-info">Change Password</a>
+                <a href="/logout" class="btn btn-primary">logout</a>
+            </div>
+        </div>
+
+        <div class="container-fluid bg-dark pt-3" id="main">
+
+
+
+
+
+
+
+            <!-- <div class="row d-flex justify-content-center"> -->
+            <!-- <div> -->
+            <!-- <button class="btn btn-secondary" onclick="prev()">Prev</button> -->
+            <!-- <button id="loadMore" class="btn btn-secondary" onclick="next()">load more</button> -->
+            <!-- </div> -->
+            <!-- </div> -->
+
+            <template id="template">
+                <div class="row  d-flex justify-content-center align-items-center bg-light mb-3" id="products">
+                    <!-- <div class="col-md-4 card"> -->
+
+                    <div class="col col-2">
+                        <img  class="d-inline" src="" alt="" id="img" width="200" height="150">
+                    </div>
+
+                    <div class="col col-10">
+
+                        <form  class=" p-4" method="post" action="/editProduct" enctype="multipart/form-data">
+
+                            <div class="d-inline">
+                                <div class="d-flex justify-content-evenly  ml-5">
+                                    <div>
+                                        <span class="mr-5">Name</span>
+                                        <input class="mr-5" type="text" name="productname" id="name">
+                                    </div>
+                                    <div>
+                                        <span>Price($)</span>
+                                        <input class="mr-5" type="text" name="price" id="price">
+                                    </div>
+
+                                    <div>
+                                        <span class="mr-5">quantity</span>
+                                        <input type="text" name="quantity" id="quantity">
+                                    </div>
+
+                                    <div>
+                                        <span class="mr-5">Description</span>
+                                        <input type="text" name="description" id="description">
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="mt-4 d-flex flex-column ml-5">
+                                <span class="mr-5" >Image</span>
+                                <input type="file" name="image">
+                                <input class="d-none" type="text" name="productid" id="productid" value="">
+                            </div>
+
+                            <div class="pt-4 d-flex justify-content-end">
+                                
+                                <input class="mr-2" type="submit" value="update">
+                                <button class="btn" value="" id="btn" onclick="">Delete</button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </template>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div>
+                <!-- <button class="btn btn-secondary" onclick="prev()">Prev</button> -->
+                <button id="loadMore" class="btn btn-secondary" onclick="loadMore()">load more</button>
+            </div>
+        </div>
+        <!-- <script src="script.js"></script>
+    <script src="cart.js"></script> -->
+        <script src="admin.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+            integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>
